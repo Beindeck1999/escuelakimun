@@ -4,373 +4,178 @@
   <meta charset="UTF-8" />
   <title>Escuela de Lenguaje Kimün</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    :root {
-      --verde-limon: #a6ff3b;
-      --verde-oscuro: #07552b;
-      --verde-boton: #2d8a3a;
-      --fondo: #f5f5f5;
-      --blanco: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--fondo);
-      color: #222;
-    }
-
-    header {
-      background: linear-gradient(90deg, var(--verde-limon), #6adf65);
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.6rem;
-      color: #054322;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #054322;
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background-color: rgba(255,255,255,0.5);
-    }
-
-    .hero {
-      padding: 40px 20px 24px;
-      text-align: center;
-      background: var(--blanco);
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-      color: var(--verde-oscuro);
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 20px auto;
-      font-size: 1rem;
-    }
-
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .btn-primary {
-      background: var(--verde-boton);
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: #ffffff;
-      color: var(--verde-boton);
-      border: 2px solid var(--verde-boton);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .grid-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .card-link {
-      background: var(--blanco);
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-    }
-
-    .card-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    .card-link h3 {
-      margin-top: 0;
-      margin-bottom: 6px;
-      color: var(--verde-oscuro);
-      font-size: 1.1rem;
-    }
-
-    .card-link p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-
-    section {
-      background: var(--blanco);
-      margin-bottom: 16px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    section h3 {
-      margin-top: 0;
-      color: var(--verde-oscuro);
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      font-size: 0.8rem;
-      color: #555;
-    }
-
-    a {
-      color: var(--verde-boton);
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- BARRA CAFÉ CON MENÚ -->
   <header>
-    <div>
-      <h1>Escuela de Lenguaje Kimün</h1>
-      <p>Donde cada palabra cuenta 💚</p>
+    <div class="nav-inner">
+      <div class="logo-box">
+        <div class="logo-circle">K</div>
+        <div class="logo-text">
+          <h1>Escuela de Lenguaje Kimün</h1>
+          <span>Donde cada palabra cuenta</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#niveles">Niveles</a>
+        <a href="#maletin">Maletín</a>
+        <a href="#talleres">Talleres</a>
+        <a href="#matriculas">Matrícula</a>
+        <button class="btn-agenda">Agenda tu hora</button>
+      </nav>
     </div>
-    <nav>
-      <a href="#mision">Misión y visión</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#maletin">Maletín virtual</a>
-      <a href="#talleres">Talleres</a>
-      <a href="#actividades">Actividades</a>
-      <a href="#matriculas">Matrículas</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Bienvenidas familias a nuestra escuelita</h2>
-    <p>
-      Somos una escuela de lenguaje gratuita para niños y niñas de 3 a 5 años,
-      especializada en trastornos del lenguaje. Acompañamos a cada familia con
-      cariño, juego y profesionalismo para que cada niño y niña avance en su
-      comunicación, autoestima y aprendizajes.
-    </p>
-    <div class="btn-container">
-      <a href="#matriculas"><button class="btn btn-primary">Matrículas 2026</button></a>
-      <a href="#maletin"><button class="btn btn-secondary">Ir al maletín virtual</button></a>
+  <!-- HERO PRINCIPAL -->
+  <section id="inicio" class="hero">
+    <div class="hero-curve"></div>
+    <div class="hero-inner">
+      <div>
+        <h2 class="hero-title">Escuela de Lenguaje Kimün</h2>
+        <p class="hero-sub">
+          Escuelita especializada en trastorno del lenguaje para niños y niñas de 3 a 5 años,
+          con atención gratuita y un equipo multidisciplinario comprometido con cada familia.
+        </p>
+        <span class="hero-badge">Lautaro · Atención gratuita</span>
+        <div class="hero-buttons">
+          <a href="#matriculas"><button class="btn-agenda">Matrículas 2026</button></a>
+          <a href="#maletin"><button class="btn-secundario">Ir al maletín virtual</button></a>
+        </div>
+      </div>
+      <div class="hero-foto"></div>
     </div>
   </section>
 
   <main>
-    <!-- Tarjetas de acceso rápido a todo lo que pidió tu jefa -->
-    <div class="grid-cards">
-      <a class="card-link" href="#maletin">
-        <h3>Maletín virtual 📂</h3>
-        <p>Descarga de tareas y materiales organizados por nivel: Medio Mayor, Prekínder y Kínder.</p>
-      </a>
-      <a class="card-link" href="#talleres">
-        <h3>Talleres y tips 🧠</h3>
-        <p>Material de fonoaudiología y terapia ocupacional para apoyar desde el hogar.</p>
-      </a>
-      <a class="card-link" href="#mision">
-        <h3>Misión, visión y sello 🌱</h3>
-        <p>Nuestro proyecto educativo y el sello que nos identifica como comunidad Kimün.</p>
-      </a>
-      <a class="card-link" href="#equipo">
-        <h3>Equipo educativo 👩‍🏫</h3>
-        <p>Conoce a las educadoras, asistentes, fonoaudióloga, terapeuta ocupacional y todo el equipo.</p>
-      </a>
-      <a class="card-link" href="#actividades">
-        <h3>Actividades destacadas 🎉</h3>
-        <p>Aniversario, campañas solidarias, operativos y otras experiencias significativas.</p>
-      </a>
-      <a class="card-link" href="#matriculas">
-        <h3>Matrículas y evaluación con fono 📝</h3>
-        <p>Información para postular y agendar evaluación inicial con la fonoaudióloga.</p>
-      </a>
-    </div>
-
-    <!-- Misión, visión, sello -->
-    <section id="mision">
-      <h3>Misión, visión y sello educativo</h3>
-      <p><strong>Misión:</strong> Entregar una educación inclusiva y de calidad, centrada en el lenguaje y en la participación activa de las familias, favoreciendo el desarrollo integral de niños y niñas de 3 a 5 años.</p>
-      <p><strong>Visión:</strong> Ser una comunidad educativa donde cada palabra, gesto y logro se celebra, promoviendo el respeto, el juego y la inclusión.</p>
-      <p><strong>Sello educativo:</strong> Trabajo interdisciplinario, enfoque en el lenguaje, aprendizaje a través del juego, acompañamiento cercano a las familias y ambiente protector y cariñoso.</p>
-      <p style="font-size:0.9rem; color:#555;">
-        *Estos textos los pueden ajustar después a la redacción oficial del proyecto educativo.*
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" class="seccion">
+      <h2>Quiénes somos</h2>
+      <p class="sub">
+        Escuela de Lenguaje Kimün: trabajo en equipo, juego y cariño para acompañar el desarrollo del lenguaje.
       </p>
+      <div class="bloque">
+        <span class="etiqueta">Proyecto educativo</span>
+        <h3>Misión, visión y sello</h3>
+        <p><strong>Misión:</strong> Entregar una educación inclusiva y de calidad, centrada en el lenguaje y en la participación activa de las familias.</p>
+        <p><strong>Visión:</strong> Ser una comunidad educativa donde cada palabra, gesto y logro se celebra.</p>
+        <p><strong>Sello:</strong> Trabajo interdisciplinario, aprendizaje a través del juego y acompañamiento cercano a las familias en un ambiente seguro y acogedor.</p>
+        <p style="font-size:0.85rem; color:#7b6a5d;">
+          *Estos textos se pueden ajustar después al proyecto educativo oficial de la escuela.*
+        </p>
+      </div>
     </section>
 
-    <!-- Equipo (por ahora sin fotos, luego las agregamos) -->
-    <section id="equipo">
-      <h3>Equipo educativo</h3>
-      <p>
-        Contamos con un equipo multidisciplinario comprometido con el bienestar y aprendizaje de los niños y niñas:
-      </p>
-      <ul>
-        <li>Dirección y equipo de gestión</li>
-        <li>Educadoras de lenguaje</li>
-        <li>Asistentes de párvulos</li>
-        <li>Fonoaudióloga</li>
-        <li>Terapeuta Ocupacional</li>
-        <li>Otros profesionales y personal de apoyo</li>
-      </ul>
-      <p>
-        Próximamente aquí verás las fotos y nombres de todo el equipo de la Escuela de Lenguaje Kimün.
-      </p>
+    <!-- NIVELES -->
+    <section id="niveles" class="seccion">
+      <h2>Conoce nuestros niveles educacionales</h2>
+      <p class="sub">Niños y niñas de 3 a 5 años, organizados en grupos pequeños para una atención más personalizada.</p>
+      <div class="tarjetas-3">
+        <div class="tarjeta-nivel">
+          <div class="icono-circulo">🧸</div>
+          <h3>Nivel Medio Mayor</h3>
+          <p>3 años cumplidos al 31 de marzo.</p>
+          <p>Primer acercamiento a la escuelita, juegos de lenguaje y socialización.</p>
+          <button class="btn-lista">Materiales y sugerencias</button>
+        </div>
+        <div class="tarjeta-nivel">
+          <div class="icono-circulo">🎠</div>
+          <h3>Nivel Prekínder</h3>
+          <p>4 años cumplidos al 31 de marzo.</p>
+          <p>Lenguaje comprensivo y expresivo, juego simbólico y participación en grupo.</p>
+          <button class="btn-lista">Materiales y sugerencias</button>
+        </div>
+        <div class="tarjeta-nivel">
+          <div class="icono-circulo">🔤</div>
+          <h3>Nivel Kínder</h3>
+          <p>5 años cumplidos al 31 de marzo.</p>
+          <p>Preparación para la lectoescritura, conciencia fonológica y autonomía.</p>
+          <button class="btn-lista">Materiales y sugerencias</button>
+        </div>
+      </div>
     </section>
 
-    <!-- Maletín virtual -->
-    <section id="maletin">
-      <h3>Maletín virtual por nivel</h3>
-      <p>
-        En este espacio las familias podrán acceder a materiales, tareas y sugerencias de actividades organizadas por nivel.
-      </p>
-      <ul>
-        <li><strong>Medio Mayor:</strong> juegos, canciones, actividades de lenguaje y motricidad gruesa.</li>
-        <li><strong>Prekínder:</strong> guías simples, pictogramas, cuentos y juegos de vocabulario.</li>
-        <li><strong>Kínder:</strong> actividades de preparación para la lectoescritura, conciencia fonológica y lenguaje comprensivo y expresivo.</li>
-      </ul>
-      <p>
-        Más adelante se pueden agregar botones con enlaces a carpetas de Google Drive por nivel
-        (por ejemplo: “Ver materiales de Medio Mayor”).
-      </p>
+    <!-- MALETÍN + TALLERES -->
+    <section class="seccion">
+      <h2>Recursos para las familias</h2>
+      <p class="sub">Maletín virtual y talleres para acompañar los procesos desde el hogar.</p>
+      <div class="grid-2">
+        <div id="maletin" class="bloque">
+          <span class="etiqueta">Maletín virtual</span>
+          <h3>Tareas y material por nivel</h3>
+          <p>
+            En el maletín virtual podrás encontrar actividades, guías y sugerencias de juegos organizadas por nivel:
+          </p>
+          <ul>
+            <li><strong>Medio Mayor:</strong> canciones, cuentos breves y juegos de movimiento.</li>
+            <li><strong>Prekínder:</strong> pictogramas, vocabulario y juegos de asociación.</li>
+            <li><strong>Kínder:</strong> conciencia fonológica, comprensión y expresión oral.</li>
+          </ul>
+          <p style="margin-top:8px; font-size:0.85rem;">
+            Más adelante aquí se pueden agregar botones que lleven a carpetas de Google Drive para cada nivel.
+          </p>
+        </div>
+        <div id="talleres" class="bloque">
+          <span class="etiqueta">Talleres</span>
+          <h3>Fonoaudiología y Terapia Ocupacional</h3>
+          <p>
+            A través de talleres y material digital, las familias reciben orientaciones para apoyar los procesos de sus hijos e hijas.
+          </p>
+          <ul>
+            <li>Tips para estimular el lenguaje en casa.</li>
+            <li>Ideas de juegos para ampliar vocabulario y mejorar la articulación.</li>
+            <li>Estrategias de autorregulación y organización de rutinas.</li>
+            <li>Actividades de motricidad fina y gruesa para el juego diario.</li>
+          </ul>
+          <p style="margin-top:8px; font-size:0.85rem;">
+            Aquí se pueden subir infografías, videos cortos y presentaciones de los talleres.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Talleres (fono / T.O.) -->
-    <section id="talleres">
-      <h3>Talleres: Fonoaudiología y Terapia Ocupacional</h3>
-      <p>
-        Aquí compartiremos información y recursos de nuestros talleres, para que las familias puedan apoyar los procesos desde el hogar.
-      </p>
-      <h4>Fonoaudiología – Lenguaje y comunicación</h4>
-      <ul>
-        <li>Tips para estimular el lenguaje en casa.</li>
-        <li>Ideas de juegos para ampliar vocabulario.</li>
-        <li>Recomendaciones para apoyar la articulación.</li>
-      </ul>
-      <h4>Terapia Ocupacional – Juego, participación y regulación</h4>
-      <ul>
-        <li>Estrategias para favorecer la atención y la autorregulación.</li>
-        <li>Actividades de motricidad fina y gruesa.</li>
-        <li>Ideas para estructurar rutinas en casa.</li>
-      </ul>
-      <p>
-        En el futuro se pueden subir infografías, videos cortos y material descargable organizado por temas.
-      </p>
-    </section>
-
-    <!-- Actividades grandes -->
-    <section id="actividades">
-      <h3>Actividades destacadas</h3>
-      <p>
-        A lo largo del año realizamos diversas actividades que hacen del aprendizaje una experiencia alegre y significativa:
-      </p>
-      <ul>
-        <li>Celebración de aniversario con carros alegóricos.</li>
-        <li>Campañas solidarias como la Teletón.</li>
-        <li>Días temáticos (Jeans Day, prevención de la violencia, día de la fonoaudióloga, etc.).</li>
-        <li>Operativos de salud y talleres para familias.</li>
-      </ul>
-      <p>
-        Próximamente agregaremos galerías de fotos y reseñas de cada actividad.
-      </p>
-    </section>
-
-    <!-- Matrículas y agendamiento -->
-    <section id="matriculas">
-      <h3>Matrículas y evaluación con fonoaudióloga</h3>
-      <p><strong>¡Matrículas 2026 abiertas para niños y niñas de 3 a 5 años!</strong></p>
-      <p>
-        Atendemos a niños y niñas con diagnóstico o sospecha de trastorno del lenguaje.
-      </p>
-      <p>Documentos referenciales (ajustar según la realidad del establecimiento):</p>
-      <ul>
-        <li>Certificado de nacimiento del niño o niña.</li>
-        <li>Cédula de identidad del apoderado.</li>
-        <li>Comprobante de domicilio.</li>
-        <li>Interconsulta o informe de especialista, si corresponde.</li>
-      </ul>
-      <p>
-        Para organizar el proceso de matrícula, se realiza una evaluación con la fonoaudióloga de la escuela.
-      </p>
-      <p>
-        Más adelante aquí podemos agregar un botón que lleve a un formulario de Google para
-        <strong>agendar evaluación</strong>, por ejemplo:
-      </p>
-      <p style="text-align:center;">
-        <em>(Botón futuro)</em> 👉 <strong>“Agendar evaluación con fonoaudióloga”</strong>
-      </p>
-    </section>
-
-    <!-- Contacto básico, si quieres lo ajustamos después -->
-    <section id="contacto">
-      <h3>Contacto</h3>
-      <p>
-        Para dudas o más información sobre la Escuela de Lenguaje Kimün:
-      </p>
-      <p>
-        <strong>Dirección:</strong> (agregar dirección real)<br />
-        <strong>Teléfono:</strong> (número de contacto)<br />
-        <strong>Correo electrónico:</strong> (correo oficial de la escuela)
-      </p>
+    <!-- MATRÍCULAS -->
+    <section id="matriculas" class="seccion">
+      <h2>Matrículas abiertas 2026</h2>
+      <p class="sub">Proceso de ingreso y evaluación fonoaudiológica para nuevos niños y niñas.</p>
+      <div class="matriculas-contenedor">
+        <h3>Información para nuevas familias</h3>
+        <div class="matriculas-grid">
+          <div class="mat-box">
+            <h4>Requisitos generales</h4>
+            <ul>
+              <li>Niños y niñas entre 3 y 5 años 11 meses.</li>
+              <li>Diagnóstico o sospecha de Trastorno Específico del Lenguaje (TEL) u otro trastorno del lenguaje.</li>
+              <li>Certificado de nacimiento del niño o niña.</li>
+              <li>Cédula de identidad del apoderado y comprobante de domicilio.</li>
+            </ul>
+          </div>
+          <div class="mat-box">
+            <h4>Pasos a seguir</h4>
+            <ul>
+              <li>Contactarse con la escuela para solicitar una hora de evaluación fonoaudiológica.</li>
+              <li>Asistir a la evaluación en la fecha y hora asignada.</li>
+              <li>Revisar los resultados y orientación entregada por el equipo.</li>
+              <li>Completar la documentación para formalizar la matrícula, si corresponde.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-agenda-centro">
+          <button>Agendar hora para evaluación fonoaudiológica</button>
+          <p style="margin-top:6px; font-size:0.85rem;">
+            Más adelante este botón se puede enlazar a un formulario o agenda en línea.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    Escuela de Lenguaje Kimün · Donde cada palabra cuenta · Sitio en construcción
+    Escuela de Lenguaje Kimün · Lautaro · Sitio en construcción – Maquetación inspirada en páginas de escuelas de lenguaje
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
