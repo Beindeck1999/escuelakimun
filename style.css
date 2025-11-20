@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-:root {
-  /* Ahora usamos verdes y azules suaves, no café */
-  --cafe-oscuro: #0b3b32;  /* encabezado: verde petróleo */
-  --cafe-medio: #135c4a;   /* tonos intermedios */
-  --verde-limon: #b9ff6e;  /* verde Kimün más suave */
-  --verde-borde: #5fc99a;  /* verde agua para bordes */
-  --amarillo: #ffe8a3;     /* amarillo muy suave para detalles */
-  --fondo: #f4fbf7;        /* fondo general muy clarito */
-  --blanco: #ffffff;
-  --texto: #16333c;        /* texto gris-azulado */
+  --cafe-oscuro: #4A2D19;     /* café cálido, NO tan oscuro como Pekes */
+  --cafe-medio: #6A3E20;       /* café brillante */
+  --verde-limon: #C9FF3A;      /* verde limón fuerte de Kimün */
+  --verde-borde: #A7E832;      /* un verde más suave para bordes */
+  --amarillo: #FFF275;         /* detalle cálido para botones */
+  --fondo: #FFFDF6;            /* blanco cremoso (suave y luminoso) */
+  --blanco: #FFFFFF;
+  --texto: #3B2A1A;            /* café oscuro para textos */
 }
-
 * {
   box-sizing: border-box;
 }
@@ -118,7 +115,7 @@ nav a:hover {
 
 /* HERO CON FONDO GRANDE */
 .hero {
-  background: linear-gradient(180deg, #e5fff3 0%, #e9f7ff 45%, #fdfefe 100%);
+  background: linear-gradient(180deg, #f8ffd9 0%, #fffce8 45%, #fffef9 100%);
   position: relative;
   overflow: hidden;
 }
