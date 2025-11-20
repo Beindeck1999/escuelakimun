@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-  --cafe-oscuro: #4A2D19;     /* café cálido, NO tan oscuro como Pekes */
-  --cafe-medio: #6A3E20;       /* café brillante */
-  --verde-limon: #C9FF3A;      /* verde limón fuerte de Kimün */
-  --verde-borde: #A7E832;      /* un verde más suave para bordes */
-  --amarillo: #FFF275;         /* detalle cálido para botones */
-  --fondo: #FFFDF6;            /* blanco cremoso (suave y luminoso) */
+  --cafe-oscuro: #4A2D19;     /* café cálido */
+  --cafe-medio: #6A3E20;
+  --verde-limon: #C9FF3A;     /* verde limón fuerte de Kimün */
+  --verde-borde: #A7E832;     /* verde suave para bordes */
+  --amarillo: #FFF275;        /* detalle cálido para botones */
+  --fondo: #FFFDF6;           /* blanco cremoso */
   --blanco: #FFFFFF;
-  --texto: #3B2A1A;            /* café oscuro para textos */
+  --texto: #3B2A1A;           /* café oscuro para textos */
 }
+
 * {
   box-sizing: border-box;
 }
@@ -100,16 +101,17 @@ nav a:hover {
   color: var(--verde-limon);
 }
 
+/* BOTÓN AGENDA (header y hero) */
 .btn-agenda {
   border-radius: 999px;
-  border: none;
-  padding: 9px 20px;
+  border: 3px solid var(--verde-limon);
+  padding: 10px 22px;
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
   color: var(--cafe-oscuro);
-  background: linear-gradient(90deg, var(--verde-limon), var(--amarillo));
-  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  background: linear-gradient(90deg, #fffcae, #ffe66a);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
   text-transform: uppercase;
 }
 
@@ -119,8 +121,8 @@ nav a:hover {
   position: relative;
   overflow: hidden;
 }
-  }
-  /* Manchitas de color suaves en el fondo del hero */
+
+/* Manchitas suaves en el fondo del hero */
 .hero::before {
   content: "";
   position: absolute;
@@ -156,12 +158,56 @@ nav a:hover {
   z-index: 2;
 }
 
-/* Cajita blanca detrás del TEXTO (lado izquierdo) */
+/* Caja de texto del hero (lado izquierdo) */
 .hero-inner > div:first-child {
   background: #ffffff;
   border-radius: 24px;
   padding: 18px 20px;
   box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  color: var(--cafe-oscuro);
+}
+
+.hero-sub {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* PASTILLA “Lautaro · Educación gratuita” */
+.hero-badge {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 20px;
+  background: #ffffff;
+  border: 3px solid var(--verde-limon);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cafe-oscuro);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* BOTÓN SECUNDARIO “Conoce nuestra escuela” */
+.btn-secundario {
+  border-radius: 999px;
+  border: 3px solid var(--cafe-oscuro);
+  background: #ffffff;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--cafe-oscuro);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* Tarjeta con la FOTO (lado derecho) */
@@ -174,6 +220,7 @@ nav a:hover {
   min-height: 260px;
   background-image: url(img/frontis.png);
 }
+
 /* CONTENIDO PRINCIPAL */
 main {
   max-width: 1180px;
@@ -402,56 +449,32 @@ footer {
 
 @media (max-width: 720px) {
   .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
   }
+
   nav {
     width: 100%;
     justify-content: flex-start;
     gap: 10px 18px;
   }
-/* BOTÓN MENÚ MÓVIL */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-}
 
-.nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 3px;
-  margin: 4px 0;
-  background: #ffffff;
-  border-radius: 999px;
-}
-
-/* Ajustes responsive mejorados */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .hero-foto {
-    min-height: 210px;
-  }
-  .grid-2 {
-    grid-template-columns: minmax(0,1fr);
-  }
-  .matriculas-grid {
-    grid-template-columns: minmax(0,1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .nav-inner {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-
+  /* BOTÓN MENÚ MÓVIL */
   .nav-toggle {
     display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin: 4px 0;
+    background: #ffffff;
+    border-radius: 999px;
   }
 
   .main-nav {
@@ -477,5 +500,4 @@ footer {
     display: flex;
   }
 }
-
 
