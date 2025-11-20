@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-  --cafe-oscuro: #3a2617;
-  --cafe-medio: #5a3824;
-  --verde-limon: #c6ff3b;
-  --verde-borde: #9ed620;
-  --amarillo: #ffe85a;
-  --fondo: #fff8ea;
+:root {
+  /* Ahora usamos verdes y azules suaves, no café */
+  --cafe-oscuro: #0b3b32;  /* encabezado: verde petróleo */
+  --cafe-medio: #135c4a;   /* tonos intermedios */
+  --verde-limon: #b9ff6e;  /* verde Kimün más suave */
+  --verde-borde: #5fc99a;  /* verde agua para bordes */
+  --amarillo: #ffe8a3;     /* amarillo muy suave para detalles */
+  --fondo: #f4fbf7;        /* fondo general muy clarito */
   --blanco: #ffffff;
-  --texto: #34241a;
+  --texto: #16333c;        /* texto gris-azulado */
 }
 
 * {
