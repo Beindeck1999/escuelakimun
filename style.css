@@ -55,7 +55,7 @@ header {
 
 /* LOGO REAL EN LA BARRA SUPERIOR */
 .logo-img img {
-  height: 52px;
+  height: 7px;
   width: auto;
   border-radius: 12px; /* puedes cambiar a 0 si lo quieres cuadrado */
   box-shadow: 0 2px 4px rgba(0,0,0,0.35);
