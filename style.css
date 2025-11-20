@@ -115,7 +115,7 @@ nav a:hover {
 
 /* HERO CON FONDO GRANDE */
 .hero {
-  background: linear-gradient(180deg, #f8ffd9 0%, #fffce8 45%, #fffef9 100%);
+  background: background-image: url("img/banner.png");
   position: relative;
   overflow: hidden;
 }
