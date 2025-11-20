@@ -116,9 +116,9 @@ nav a:hover {
 /* HERO CON FONDO GRANDE */
 .hero {
   background-image: url("img/BANNER.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;        /* la imagen ocupa todo el ancho */
+  background-position: center;   /* centrada */
+  background-repeat: no-repeat;  /* que no se repita como mosaico */
   position: relative;
   overflow: hidden;
 }
