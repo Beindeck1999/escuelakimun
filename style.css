@@ -53,19 +53,13 @@ header {
   gap: 10px;
 }
 
-.logo-circle {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ffffff, var(--verde-limon));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Baloo 2', system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--cafe-oscuro);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+/* LOGO REAL EN LA BARRA SUPERIOR */
+.logo-img img {
+  height: 52px;
+  width: auto;
+  border-radius: 12px; /* puedes cambiar a 0 si lo quieres cuadrado */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.35);
+  object-fit: contain;
 }
 
 .logo-text {
