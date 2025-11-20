@@ -118,7 +118,7 @@ nav a:hover {
 
 /* HERO CON FONDO GRANDE */
 .hero {
-  background: linear-gradient(180deg, #ffeaa7 0%, #f7f1e9 45%, #fefdf8 100%);
+  background: linear-gradient(180deg, #e5fff3 0%, #e9f7ff 45%, #fdfefe 100%);
   position: relative;
   overflow: hidden;
 }
@@ -366,8 +366,8 @@ main {
 .mat-box {
   border-radius: 22px;
   padding: 14px 14px 16px;
-  background: #fffef6;
-  border: 2px solid #facc6b;
+  background: #f3fbf7;
+  border: 2px solid var(--verde-borde);
   font-size: 0.9rem;
 }
 
