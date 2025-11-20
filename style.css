@@ -115,7 +115,7 @@ nav a:hover {
 
 /* HERO CON FONDO GRANDE */
 .hero {
-  background: background-image: url("img/BANNER.png");
+  background: background-image: url(img/BANNER.png); 
   position: relative;
   overflow: hidden;
 }
