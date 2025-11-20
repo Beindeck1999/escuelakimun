@@ -115,9 +115,10 @@ nav a:hover {
 
 /* HERO CON FONDO SUAVE Y CAJAS */
 .hero {
-  background: linear-gradient(180deg, #fffde9 0%, #ffffff 55%, #ffffff 100%);
+  background: linear-gradient(180deg, #DFFF89 0%, #FFFBE6 55%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
+}
   }
   /* Manchitas de color suaves en el fondo del hero */
 .hero::before {
@@ -167,7 +168,7 @@ nav a:hover {
 .hero-foto {
   border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 28px rgba(74, 45, 25, 0.25);
   background-size: cover;
   background-position: center;
   min-height: 260px;
