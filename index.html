@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- BARRA CAFÉ CON MENÚ -->
   <header>
     <div class="nav-inner">
@@ -37,46 +38,50 @@
         <a href="#matriculas">Matrícula</a>
         <button class="btn-agenda">Agenda tu hora</button>
       </nav>
-    </div> <!-- .nav-inner -->
+    </div>
   </header>
 
-  <!-- HERO / BANNER TIPO FLYER -->
+  <!-- ========================= -->
+  <!--   BANNER TIPO FLYER       -->
+  <!-- ========================= -->
+
   <section id="inicio" class="banner-flyer">
-    <div class="banner-box">
 
-      <!-- Fila superior: logo + foto colegio -->
-      <div class="banner-top">
-        <img src="img/logo.png" class="banner-logo" alt="Logo Kimün">
-        <img src="img/frontis.png" class="banner-frontis" alt="Frontis Escuela Kimün">
+    <!-- Fila superior -->
+    <div class="banner-top">
+      <img src="img/logo.png" class="banner-logo" alt="Logo Kimün">
+      <img src="img/frontis.png" class="banner-frontis" alt="Frontis Escuela Kimün">
+    </div>
+
+    <!-- Texto grande -->
+    <div class="banner-titulo">
+      MATRÍCULAS<br>ABIERTAS
+    </div>
+
+    <!-- Fila inferior circular -->
+    <div class="banner-circulares">
+
+      <div class="circulo-item">
+        <img src="img/salas.png" class="circulo-img" alt="Salas de clases">
+        <p>Salas de clases</p>
       </div>
 
-      <!-- Texto grande centrado -->
-      <div class="banner-titulo">
-        MATRÍCULAS<br>ABIERTAS
+      <div class="circulo-item">
+        <img src="img/sala.fono.png" class="circulo-img" alt="Sala de fonoaudiología">
+        <p>Sala de fonoaudiología</p>
       </div>
 
-      <!-- Fila inferior circular -->
-      <div class="banner-circulares">
-        <div class="circulo-item">
-          <img src="img/salas.png" class="circulo-img" alt="Salas de clases">
-          <p>Salas de clases</p>
-        </div>
-
-        <div class="circulo-item">
-          <img src="img/sala.fono.png" class="circulo-img" alt="Sala de fonoaudiología">
-          <p>Sala de fonoaudiología</p>
-        </div>
-
-        <div class="circulo-item">
-          <img src="img/furgon.png" class="circulo-img" alt="Transporte gratuito">
-          <p>Transporte gratuito</p>
-        </div>
+      <div class="circulo-item">
+        <img src="img/furgon.png" class="circulo-img" alt="Transporte gratuito">
+        <p>Transporte gratuito</p>
       </div>
 
-    </div> <!-- .banner-box -->
+    </div>
   </section>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
+
     <!-- QUIÉNES SOMOS -->
     <section id="nosotros" class="seccion">
       <h2>Quiénes somos</h2>
@@ -89,9 +94,6 @@
         <p><strong>Misión:</strong> Entregar una educación inclusiva y de calidad, centrada en el lenguaje y en la participación activa de las familias.</p>
         <p><strong>Visión:</strong> Ser una comunidad educativa donde cada palabra, gesto y logro se celebra.</p>
         <p><strong>Sello:</strong> Trabajo interdisciplinario, aprendizaje a través del juego y acompañamiento cercano a las familias en un ambiente seguro y acogedor.</p>
-        <p style="font-size:0.85rem; color:#7b6a5d;">
-          *Estos textos se pueden ajustar después al proyecto educativo oficial de la escuela.*
-        </p>
       </div>
     </section>
 
@@ -99,66 +101,52 @@
     <section id="niveles" class="seccion">
       <h2>Conoce nuestros niveles educacionales</h2>
       <p class="sub">Niños y niñas de 3 a 5 años, organizados en grupos pequeños para una atención más personalizada.</p>
+
       <div class="tarjetas-3">
+
         <div class="tarjeta-nivel">
           <div class="icono-circulo">🧸</div>
           <h3>Nivel Medio Mayor</h3>
           <p>3 años cumplidos al 31 de marzo.</p>
-          <p>Primer acercamiento a la escuelita, juegos de lenguaje y socialización.</p>
+          <p>Primer acercamiento a la escuelita.</p>
           <button class="btn-lista">Materiales y sugerencias</button>
         </div>
+
         <div class="tarjeta-nivel">
           <div class="icono-circulo">🎠</div>
           <h3>Nivel Prekínder</h3>
           <p>4 años cumplidos al 31 de marzo.</p>
-          <p>Lenguaje comprensivo y expresivo, juego simbólico y participación en grupo.</p>
+          <p>Lenguaje comprensivo y expresivo.</p>
           <button class="btn-lista">Materiales y sugerencias</button>
         </div>
+
         <div class="tarjeta-nivel">
           <div class="icono-circulo">🔤</div>
           <h3>Nivel Kínder</h3>
           <p>5 años cumplidos al 31 de marzo.</p>
-          <p>Preparación para la lectoescritura, conciencia fonológica y autonomía.</p>
+          <p>Preparación para lectoescritura.</p>
           <button class="btn-lista">Materiales y sugerencias</button>
         </div>
+
       </div>
     </section>
 
-    <!-- MALETÍN + TALLERES -->
+    <!-- RECURSOS -->
     <section class="seccion">
       <h2>Recursos para las familias</h2>
       <p class="sub">Maletín virtual y talleres para acompañar los procesos desde el hogar.</p>
+
       <div class="grid-2">
         <div id="maletin" class="bloque">
           <span class="etiqueta">Maletín virtual</span>
           <h3>Tareas y material por nivel</h3>
-          <p>
-            En el maletín virtual podrás encontrar actividades, guías y sugerencias de juegos organizadas por nivel:
-          </p>
-          <ul>
-            <li><strong>Medio Mayor:</strong> canciones, cuentos breves y juegos de movimiento.</li>
-            <li><strong>Prekínder:</strong> pictogramas, vocabulario y juegos de asociación.</li>
-            <li><strong>Kínder:</strong> conciencia fonológica, comprensión y expresión oral.</li>
-          </ul>
-          <p style="margin-top:8px; font-size:0.85rem;">
-            Más adelante aquí se pueden agregar botones que lleven a carpetas de Google Drive para cada nivel.
-          </p>
+          <p>Actividades, guías y sugerencias organizadas por nivel.</p>
         </div>
+
         <div id="talleres" class="bloque">
           <span class="etiqueta">Talleres</span>
-          <h3>Fonoaudiología y Terapia Ocupacional</h3>
-          <p>
-            A través de talleres y material digital, las familias reciben orientaciones para apoyar los procesos de sus hijos e hijas.
-          </p>
-          <ul>
-            <li>Tips para estimular el lenguaje en casa.</li>
-            <li>Ideas de juegos para ampliar vocabulario y mejorar la articulación.</li>
-            <li>Estrategias de autorregulación y organización de rutinas.</li>
-            <li>Actividades de motricidad fina y gruesa para el juego diario.</li>
-          </ul>
-          <p style="margin-top:8px; font-size:0.85rem;">
-            Aquí se pueden subir infografías, videos cortos y presentaciones de los talleres.
-          </p>
+          <h3>Fonoaudiología y T.O.</h3>
+          <p>Material descargable y orientaciones para familias.</p>
         </div>
       </div>
     </section>
@@ -166,41 +154,17 @@
     <!-- MATRÍCULAS -->
     <section id="matriculas" class="seccion">
       <h2>Matrículas abiertas 2026</h2>
-      <p class="sub">Proceso de ingreso y evaluación fonoaudiológica para nuevos niños y niñas.</p>
+      <p class="sub">Proceso de ingreso para nuevos estudiantes.</p>
       <div class="matriculas-contenedor">
         <h3>Información para nuevas familias</h3>
-        <div class="matriculas-grid">
-          <div class="mat-box">
-            <h4>Requisitos generales</h4>
-            <ul>
-              <li>Niños y niñas entre 3 y 5 años 11 meses.</li>
-              <li>Diagnóstico o sospecha de Trastorno Específico del Lenguaje (TEL) u otro trastorno del lenguaje.</li>
-              <li>Certificado de nacimiento del niño o niña.</li>
-              <li>Cédula de identidad del apoderado y comprobante de domicilio.</li>
-            </ul>
-          </div>
-          <div class="mat-box">
-            <h4>Pasos a seguir</h4>
-            <ul>
-              <li>Contactarse con la escuela para solicitar una hora de evaluación fonoaudiológica.</li>
-              <li>Asistir a la evaluación en la fecha y hora asignada.</li>
-              <li>Revisar los resultados y orientación entregada por el equipo.</li>
-              <li>Completar la documentación para formalizar la matrícula, si corresponde.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="cta-agenda-centro">
-          <button>Agendar hora para evaluación fonoaudiológica</button>
-          <p style="margin-top:6px; font-size:0.85rem;">
-            Más adelante este botón se puede enlazar a un formulario o agenda en línea.
-          </p>
-        </div>
+        <p>Requisitos y pasos a seguir para postular.</p>
       </div>
     </section>
+
   </main>
 
   <footer>
-    Escuela de Lenguaje Kimün · Lautaro · Sitio en construcción – Maquetación inspirada en páginas de escuelas de lenguaje
+    Escuela de Lenguaje Kimün · Lautaro · Sitio en construcción
   </footer>
 
   <script src="script.js"></script>
