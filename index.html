@@ -24,9 +24,7 @@
 
       <!-- Botón menú móvil -->
       <button class="nav-toggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="main-nav">
@@ -41,45 +39,102 @@
     </div>
   </header>
 
-  <!-- ========================= -->
-  <!--   BANNER TIPO FLYER       -->
-  <!-- ========================= -->
+
+
+  <!-- ========================================================= -->
+  <!--   BANNER PRINCIPAL | LOGO SOBRE IMAGEN + 3 CÍRCULOS       -->
+  <!-- ========================================================= -->
 
   <section id="inicio" class="banner-flyer">
 
-    <!-- Fila superior -->
-    <div class="banner-top">
-      <img src="img/logo.png" class="banner-logo" alt="Logo Kimün">
+    <!-- LOGO SOBRE LA IMAGEN -->
+    <div class="banner-hero">
       <img src="img/frontis.png" class="banner-frontis" alt="Frontis Escuela Kimün">
+
+      <img src="img/logo.png" class="banner-logo-superpuesto" alt="Logo Kimün">
+
+      <h1 class="banner-titulo-superpuesto">
+        MATRÍCULAS<br>ABIERTAS
+      </h1>
     </div>
 
-    <!-- Texto grande -->
-    <div class="banner-titulo">
-      MATRÍCULAS<br>ABIERTAS
-    </div>
-
-    <!-- Fila inferior circular -->
+    <!-- CÍRCULOS ABAJO -->
     <div class="banner-circulares">
 
-      <div class="circulo-item">
-        <img src="img/salas.png" class="circulo-img" alt="Salas de clases">
-        <p>Salas de clases</p>
+      <!-- CÍRCULO 1 -->
+      <div class="circulo-item circulo-left">
+        <svg viewBox="0 0 200 200" class="circulo-svg">
+          <circle cx="100" cy="100" r="90" class="circulo-base" />
+
+          <defs>
+            <path id="txtPath1"
+                  d="M100,10 a90,90 0 1,1 0,180 a90,90 0 1,1 0,-180" />
+          </defs>
+
+          <text class="circulo-text">
+            <textPath href="#txtPath1">Salas amplias • Espacios cálidos •</textPath>
+          </text>
+        </svg>
+
+        <div class="circulo-centro-texto">
+          <img src="img/salas.png" class="circulo-img" alt="Salas de clases">
+          <p>Salas de clases</p>
+        </div>
       </div>
 
-      <div class="circulo-item">
-        <img src="img/sala.fono.png" class="circulo-img" alt="Sala de fonoaudiología">
-        <p>Sala de fonoaudiología</p>
+      <!-- CÍRCULO 2 (DESTACA) -->
+      <div class="circulo-item circulo-center">
+        <svg viewBox="0 0 220 220" class="circulo-svg">
+          <circle cx="110" cy="110" r="100" class="circulo-base" />
+
+          <defs>
+            <path id="txtPath2"
+                  d="M110,10 a100,100 0 1,1 0,200 a100,100 0 1,1 0,-200" />
+          </defs>
+
+          <text class="circulo-text">
+            <textPath href="#txtPath2">
+              Atención especializada • Fonoaudiología • Comunidad •
+            </textPath>
+          </text>
+        </svg>
+
+        <div class="circulo-centro-texto">
+          <img src="img/sala.fono.png" class="circulo-img" alt="Sala de fonoaudiología">
+          <p>Sala de fonoaudiología</p>
+        </div>
       </div>
 
-      <div class="circulo-item">
-        <img src="img/furgon.png" class="circulo-img" alt="Transporte gratuito">
-        <p>Transporte gratuito</p>
+      <!-- CÍRCULO 3 -->
+      <div class="circulo-item circulo-right">
+        <svg viewBox="0 0 200 200" class="circulo-svg">
+          <circle cx="100" cy="100" r="90" class="circulo-base" />
+
+          <defs>
+            <path id="txtPath3"
+                  d="M100,10 a90,90 0 1,1 0,180 a90,90 0 1,1 0,-180" />
+          </defs>
+
+          <text class="circulo-text">
+            <textPath href="#txtPath3">Gratuito • Seguro • Cercano •</textPath>
+          </text>
+        </svg>
+
+        <div class="circulo-centro-texto">
+          <img src="img/furgon.png" class="circulo-img" alt="Transporte gratuito">
+          <p>Transporte gratuito</p>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- CONTENIDO PRINCIPAL -->
+
+
+  <!-- ========================================================= -->
+  <!--                       CONTENIDO                           -->
+  <!-- ========================================================= -->
+
   <main>
 
     <!-- QUIÉNES SOMOS -->
@@ -96,6 +151,7 @@
         <p><strong>Sello:</strong> Trabajo interdisciplinario, aprendizaje a través del juego y acompañamiento cercano a las familias en un ambiente seguro y acogedor.</p>
       </div>
     </section>
+
 
     <!-- NIVELES -->
     <section id="niveles" class="seccion">
@@ -131,6 +187,8 @@
       </div>
     </section>
 
+
+
     <!-- RECURSOS -->
     <section class="seccion">
       <h2>Recursos para las familias</h2>
@@ -151,6 +209,8 @@
       </div>
     </section>
 
+
+
     <!-- MATRÍCULAS -->
     <section id="matriculas" class="seccion">
       <h2>Matrículas abiertas 2026</h2>
@@ -163,11 +223,14 @@
 
   </main>
 
+
+
   <footer>
     Escuela de Lenguaje Kimün · Lautaro · Sitio en construcción
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
 
