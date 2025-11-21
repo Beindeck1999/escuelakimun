@@ -167,7 +167,7 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 }
 
 .banner-matriculas-btn {
@@ -196,7 +196,7 @@ header {
    ========================== */
 
 .banner-circulares {
-  margin-top: -40px; /* se montan en el banner y bajo el botón */
+  margin-top: -100px; /* se montan en el banner y bajo el botón */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,15 +236,18 @@ header {
 
 .circulo-base {
   fill: #fff9e8;
-  stroke: #f4c742;
-  stroke-width: 6;
+  stroke: #f9d44a; /* AMARILLO CANVA */
+  stroke-width: 10;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
 }
 
 /* TEXTO CURVO ABAJO */
 
 .circulo-text {
-  font-size: 11px;
+  .circulo-text {
+  font-size: 14px;        /* más grande */
+  font-weight: 800;       /* más grueso */
+  letter-spacing: 2px;    /* estilo Canva separadito */
   letter-spacing: 1px;
   text-transform: uppercase;
   fill: #555555;
