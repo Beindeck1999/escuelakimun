@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-  --cafe-oscuro: #4A2D19;     /* café cálido */
+  --cafe-oscuro: #4A2D19;
   --cafe-medio: #6A3E20;
-  --verde-limon: #C9FF3A;     /* verde limón fuerte de Kimün */
-  --verde-borde: #A7E832;     /* verde suave para bordes */
-  --amarillo: #FFF275;        /* detalle cálido para botones */
-  --fondo: #FFFDF6;           /* blanco cremoso */
+  --verde-limon: #C9FF3A;
+  --verde-borde: #A7E832;
+  --amarillo: #FFF275;
+  --fondo: #FFFDF6;
   --blanco: #FFFFFF;
-  --texto: #3B2A1A;           /* café oscuro para textos */
+  --texto: #3B2A1A;
 }
 
+/* RESET */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: 'Poppins', system-ui, sans-serif;
   background: var(--fondo);
   color: var(--texto);
@@ -24,10 +26,11 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Baloo 2', system-ui, sans-serif;
-  margin: 0;
 }
 
-/* BARRA SUPERIOR CAFÉ */
+/* ======================================= */
+/*              HEADER                     */
+/* ======================================= */
 header {
   background: var(--cafe-oscuro);
   color: #fff;
@@ -38,13 +41,12 @@ header {
 
 .nav-inner {
   max-width: 1180px;
-  margin: 0 auto;
+  margin: auto;
   padding: 10px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  flex-wrap: wrap;
 }
 
 .logo-box {
@@ -53,12 +55,10 @@ header {
   gap: 10px;
 }
 
-/* LOGO PNG SIN CÍRCULO */
 .logo-real img {
-  height: 58px;         /* tamaño del logo */
+  height: 58px;
   width: auto;
   object-fit: contain;
-  display: block;
 }
 
 .logo-text {
@@ -78,7 +78,6 @@ nav {
   display: flex;
   align-items: center;
   gap: 14px;
-  flex-wrap: wrap;
 }
 
 nav a {
@@ -87,14 +86,12 @@ nav a {
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 
 nav a:hover {
   color: var(--verde-limon);
 }
 
-/* BOTÓN AGENDA (header y hero) */
 .btn-agenda {
   border-radius: 999px;
   border: 3px solid var(--verde-limon);
@@ -108,395 +105,9 @@ nav a:hover {
   text-transform: uppercase;
 }
 
-/* HERO CON FONDO SUAVE Y CAJAS */
-.hero {
-  background: linear-gradient(180deg, #DFFF89 0%, #FFFBE6 55%, #FFFFFF 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Manchitas suaves en el fondo del hero */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 10% 20%, rgba(201, 255, 58, 0.28) 0, rgba(201, 255, 58, 0) 55%),
-    radial-gradient(circle at 85% 10%, rgba(255, 242, 117, 0.30) 0, rgba(255, 242, 117, 0) 55%),
-    radial-gradient(circle at 50% 80%, rgba(201, 255, 58, 0.18) 0, rgba(201, 255, 58, 0) 55%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-curve {
-  position: absolute;
-  bottom: -80px;
-  left: -10%;
-  width: 120%;
-  height: 180px;
-  background: var(--verde-limon);
-  border-radius: 50% 50% 0 0;
-  z-index: 1;
-}
-
-.hero-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 34px 18px 120px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  gap: 26px;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-/* Caja de texto del hero (lado izquierdo) */
-.hero-inner > div:first-child {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 18px 20px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
-}
-
-.hero-title {
-  font-size: 2.2rem;
-  color: var(--cafe-oscuro);
-}
-
-.hero-sub {
-  margin-top: 8px;
-  font-size: 1rem;
-}
-
-.hero-buttons {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* PASTILLA “Lautaro · Educación gratuita” */
-.hero-badge {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 8px 20px;
-  background: #ffffff;
-  border: 3px solid var(--verde-limon);
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--cafe-oscuro);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-/* BOTÓN SECUNDARIO “Conoce nuestra escuela” */
-.btn-secundario {
-  border-radius: 999px;
-  border: 3px solid var(--cafe-oscuro);
-  background: #ffffff;
-  padding: 10px 22px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  cursor: pointer;
-  color: var(--cafe-oscuro);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-/* Tarjeta con la FOTO (lado derecho) */
-.hero-foto {
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(74, 45, 25, 0.25);
-  background-size: cover;
-  background-position: center;
-  min-height: 260px;
-  background-image: url(img/frontis.png);
-}
-
-/* CONTENIDO PRINCIPAL */
-main {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 20px 18px 40px;
-  position: relative;
-  z-index: 2;
-}
-
-.seccion {
-  margin-top: 26px;
-}
-
-.seccion h2 {
-  font-size: 1.8rem;
-  color: var(--cafe-oscuro);
-  text-align: center;
-  margin-bottom: 6px;
-}
-
-.seccion p.sub {
-  text-align: center;
-  font-size: 0.95rem;
-  margin-top: 0;
-  margin-bottom: 18px;
-  color: #7b6a5d;
-}
-
-/* TARJETAS NIVELES / BENEFICIOS */
-.tarjetas-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-}
-
-.tarjeta-nivel {
-  background: var(--blanco);
-  border-radius: 26px;
-  padding: 18px 18px 20px;
-  border: 3px solid var(--verde-borde);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.tarjeta-nivel::before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: rgba(198,255,59,0.4);
-  top: -60px;
-  left: -40px;
-  z-index: 0;
-}
-
-.icono-circulo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--blanco);
-  border: 4px solid var(--verde-borde);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 8px;
-  font-size: 1.8rem;
-  z-index: 1;
-  position: relative;
-}
-
-.tarjeta-nivel h3 {
-  margin-top: 6px;
-  font-size: 1.2rem;
-  color: var(--cafe-oscuro);
-  position: relative;
-  z-index: 1;
-}
-
-.tarjeta-nivel p {
-  position: relative;
-  z-index: 1;
-  margin: 4px 0;
-  font-size: 0.9rem;
-}
-
-.btn-lista {
-  margin-top: 10px;
-  border-radius: 999px;
-  border: none;
-  padding: 8px 16px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  cursor: pointer;
-  background: linear-gradient(90deg, var(--verde-limon), var(--amarillo));
-  color: var(--cafe-oscuro);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-}
-
-/* MALETÍN + TALLERES */
-.grid-2 {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-  gap: 18px;
-}
-
-.bloque {
-  background: var(--blanco);
-  border-radius: 26px;
-  padding: 18px 18px 20px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  border: 2px solid #f2e1c5;
-}
-
-.bloque h3 {
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-  color: var(--cafe-oscuro);
-}
-
-.etiqueta {
-  display: inline-block;
-  margin-bottom: 6px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  background: #fff1c2;
-  color: var(--cafe-oscuro);
-  font-weight: 600;
-}
-
-.bloque ul {
-  margin: 8px 0 0;
-  padding-left: 18px;
-  font-size: 0.9rem;
-}
-
-/* MATRÍCULAS */
-.matriculas-contenedor {
-  background: var(--blanco);
-  border-radius: 30px;
-  padding: 20px 18px 22px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-  border: 3px solid var(--verde-borde);
-}
-
-.matriculas-contenedor h3 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 4px;
-}
-
-.matriculas-grid {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-  gap: 18px;
-  margin-top: 14px;
-}
-
-.mat-box {
-  border-radius: 22px;
-  padding: 14px 14px 16px;
-  background: #f3fbf7;
-  border: 2px solid var(--verde-borde);
-  font-size: 0.9rem;
-}
-
-.mat-box h4 {
-  margin: 0 0 6px;
-  font-size: 1rem;
-  color: var(--cafe-oscuro);
-}
-
-.mat-box ul {
-  margin: 6px 0 0;
-  padding-left: 18px;
-}
-
-.cta-agenda-centro {
-  margin-top: 16px;
-  text-align: center;
-}
-
-.cta-agenda-centro button {
-  border-radius: 999px;
-  border: none;
-  padding: 10px 22px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  background: linear-gradient(90deg, var(--verde-limon), var(--amarillo));
-  color: var(--cafe-oscuro);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-  text-transform: uppercase;
-}
-
-/* PIE */
-footer {
-  background: var(--cafe-oscuro);
-  color: #fef3c7;
-  text-align: center;
-  padding: 16px 10px;
-  font-size: 0.8rem;
-  margin-top: 24px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .hero-foto {
-    min-height: 210px;
-  }
-  .grid-2 {
-    grid-template-columns: minmax(0,1fr);
-  }
-  .matriculas-grid {
-    grid-template-columns: minmax(0,1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .nav-inner {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-
-  nav {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 10px 18px;
-  }
-
-  /* BOTÓN MENÚ MÓVIL */
-  .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-  }
-
-  .nav-toggle span {
-    display: block;
-    width: 22px;
-    height: 3px;
-    margin: 4px 0;
-    background: #ffffff;
-    border-radius: 999px;
-  }
-
-  .main-nav {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 58px;
-    background: var(--cafe-oscuro);
-    padding: 10px 18px 14px;
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .main-nav a,
-  .main-nav .btn-agenda {
-    width: 100%;
-    text-align: left;
-  }
-
-  /* Cuando se abre el menú */
-  .main-nav.nav-open {
-    display: flex;
-  }
-}
-
-/* ============================= */
-/*      BANNER TIPO FLYER        */
-/* ============================= */
+/* ======================================= */
+/*            BANNER TIPO FLYER            */
+/* ======================================= */
 
 .banner-flyer {
   width: 100%;
@@ -508,7 +119,7 @@ footer {
   border-bottom: 6px solid var(--verde-limon);
 }
 
-/* FILA SUPERIOR */
+/* TOP */
 .banner-top {
   width: 100%;
   max-width: 1180px;
@@ -534,7 +145,7 @@ footer {
   object-fit: cover;
 }
 
-/* TÍTULO MATRÍCULAS */
+/* TÍTULO */
 .banner-titulo {
   margin-top: -40px;
   background: #779FFF;
@@ -549,7 +160,7 @@ footer {
   text-transform: uppercase;
 }
 
-/* CÍRCULOS INFERIORES */
+/* CÍRCULOS */
 .banner-circulares {
   margin-top: 25px;
   display: flex;
@@ -576,4 +187,156 @@ footer {
   font-weight: 700;
   font-size: 0.9rem;
   color: var(--cafe-oscuro);
+}
+
+/* ======================================= */
+/*                 CONTENIDO               */
+/* ======================================= */
+main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 20px 18px 40px;
+}
+
+.seccion {
+  margin-top: 26px;
+}
+
+.seccion h2 {
+  font-size: 1.8rem;
+  color: var(--cafe-oscuro);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.seccion p.sub {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  color: #7b6a5d;
+}
+
+/* TARJETAS */
+.tarjetas-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.tarjeta-nivel {
+  background: var(--blanco);
+  border-radius: 26px;
+  padding: 18px;
+  border: 3px solid var(--verde-borde);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tarjeta-nivel::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(198,255,59,0.4);
+  top: -60px;
+  left: -40px;
+}
+
+.icono-circulo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--blanco);
+  border: 4px solid var(--verde-borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 1.8rem;
+}
+
+.btn-lista {
+  margin-top: 10px;
+  border-radius: 999px;
+  border: none;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, var(--verde-limon), var(--amarillo));
+  color: var(--cafe-oscuro);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* BLOQUES 2 COLUMNAS */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.bloque {
+  background: var(--blanco);
+  border-radius: 26px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  border: 2px solid #f2e1c5;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #fff1c2;
+  color: var(--cafe-oscuro);
+  font-weight: 600;
+}
+
+/* MATRÍCULAS */
+.matriculas-contenedor {
+  background: var(--blanco);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  border: 3px solid var(--verde-borde);
+}
+
+/* FOOTER */
+footer {
+  background: var(--cafe-oscuro);
+  color: #fef3c7;
+  text-align: center;
+  padding: 16px 10px;
+  margin-top: 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+
+  .banner-frontis {
+    height: 200px;
+  }
+
+  .banner-titulo {
+    font-size: 2rem;
+    padding: 16px 26px;
+  }
+
+  .nav-inner {
+    flex-wrap: nowrap;
+  }
+
+  .main-nav {
+    display: none;
+  }
 }
