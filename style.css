@@ -151,7 +151,7 @@ header {
   position: absolute;
   top: 12%;
   left: 7%;
-  width: 170px;          /* cambias este valor si lo quieres más grande/chico */
+  width: 200px;          /* cambias este valor si lo quieres más grande/chico */
   max-width: 40vw;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
 }
