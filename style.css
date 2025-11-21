@@ -160,19 +160,23 @@ header {
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
 }
 
-/* GLOBO AZUL MATRÍCULAS COMO BOTÓN */
+/* BOTÓN MATRÍCULAS SOBRE LOS CÍRCULOS */
 
-.banner-titulo-superpuesto {
-  position: absolute;
-  left: 50%;
-  bottom: 7%;
-  transform: translateX(-50%);
+.banner-matriculas-btn-wrapper {
+  margin-top: -30px;         /* lo acerca a la unión con los círculos */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.banner-matriculas-btn {
   background: #3d6ee7;
   color: #ffffff;
-  padding: 0.8rem 2.3rem;
+  padding: 0.8rem 2.4rem;
   border-radius: 30px;
   font-weight: 800;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   line-height: 1.1;
   text-align: center;
   text-transform: uppercase;
@@ -182,9 +186,9 @@ header {
   cursor: pointer;
 }
 
-.banner-titulo-superpuesto:hover {
+.banner-matriculas-btn:hover {
   filter: brightness(1.05);
-  transform: translateX(-50%) translateY(-1px);
+  transform: translateY(-1px);
 }
 
 /* ==========================
@@ -192,7 +196,7 @@ header {
    ========================== */
 
 .banner-circulares {
-  margin-top: -85px; /* se montan en el banner */
+  margin-top: -40px; /* se montan en el banner y bajo el botón */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,41 +241,13 @@ header {
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
 }
 
-/* TEXTO CURVO */
+/* TEXTO CURVO ABAJO */
 
 .circulo-text {
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
   fill: #555555;
-}
-
-/* CONTENIDO DEL CENTRO DEL CÍRCULO (IMAGEN + TEXTO) */
-
-.circulo-centro-texto {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0.6rem;
-  pointer-events: none;
-}
-
-.circulo-img {
-  width: 82px;
-  height: 82px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.4rem;
-}
-
-.circulo-centro-texto p {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #333333;
 }
 
 /* ==========================
@@ -428,17 +404,12 @@ footer {
     height: 260px;
   }
 
-  .banner-logo-superpuesto {
-    width: 150px;
-  }
-
-  .banner-titulo-superpuesto {
-    bottom: 7%;
-    padding: 0.6rem 1.6rem;
+  .banner-matriculas-btn-wrapper {
+    margin-top: -20px;
   }
 
   .banner-circulares {
-    margin-top: -55px;
+    margin-top: -30px;
   }
 
   .grid-2 {
@@ -447,6 +418,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .banner-matriculas-btn-wrapper {
+    margin-top: 0.5rem;
+  }
+
   .banner-circulares {
     flex-direction: column;
     margin-top: 0.75rem;
