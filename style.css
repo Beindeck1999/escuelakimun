@@ -234,11 +234,11 @@ header {
 }
 
 .circulo-text {
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  fill: #555555;
+  fill: ##4b4b4b;
 }
 
 /* ==========================
