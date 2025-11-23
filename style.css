@@ -104,7 +104,7 @@ header {
   filter: brightness(1.05);
 }
 
-/* Botón menú móvil (solo visual, el JS lo maneja) */
+/* Botón menú móvil (solo visual) */
 
 .nav-toggle {
   display: none;
@@ -127,11 +127,9 @@ header {
 
 .banner-flyer {
   max-width: 1100px;
-  margin: 1.5rem auto 3.2rem;
+  margin: 1.5rem auto 3rem;
   padding: 0 1.25rem;
 }
-
-/* Contenedor con imagen de frontis y logo encima */
 
 .banner-hero {
   position: relative;
@@ -149,8 +147,6 @@ header {
   filter: brightness(0.9);
 }
 
-/* LOGO SOBRE LA IMAGEN, GRANDE ARRIBA IZQUIERDA */
-
 .banner-logo-superpuesto {
   position: absolute;
   top: 6%;
@@ -163,11 +159,11 @@ header {
 /* BOTÓN MATRÍCULAS SOBRE LOS CÍRCULOS */
 
 .banner-matriculas-btn-wrapper {
-  margin-top: -30px;         /* lo acerca a la unión con los círculos */
+  margin-top: -30px;
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 5;
+  z-index: 3;
 }
 
 .banner-matriculas-btn {
@@ -196,7 +192,7 @@ header {
    ========================== */
 
 .banner-circulares {
-  margin-top: -100px; /* se montan en el banner y bajo el botón */
+  margin-top: -60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,10 +205,8 @@ header {
   position: relative;
   width: 210px;
   height: 210px;
-  margin: 0 -42px; /* margen negativo = se montan entre sí */
+  margin: 0 -42px;
 }
-
-/* CÍRCULO CENTRAL MÁS GRANDE Y ADELANTE */
 
 .circulo-center {
   width: 240px;
@@ -232,23 +226,17 @@ header {
   height: 100%;
 }
 
-/* Estilo tipo flyer: fondo crema + borde dorado */
-
 .circulo-base {
   fill: #fff9e8;
-  stroke: #f9d44a; /* AMARILLO CANVA */
+  stroke: #f9d44a;
   stroke-width: 10;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
 }
 
-/* TEXTO CURVO ABAJO */
-
 .circulo-text {
-  .circulo-text {
-  font-size: 14px;        /* más grande */
-  font-weight: 800;       /* más grueso */
-  letter-spacing: 2px;    /* estilo Canva separadito */
-  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
   fill: #555555;
 }
@@ -304,7 +292,7 @@ header {
 }
 
 /* ==========================
-   TARJETAS NIVELES (3 COLUMNS)
+   TARJETAS NIVELES
    ========================== */
 
 .tarjetas-3 {
@@ -354,7 +342,7 @@ header {
 }
 
 /* ==========================
-   GRID 2 COLUMNAS (RECURSOS)
+   GRID 2 COLUMNAS
    ========================== */
 
 .grid-2 {
@@ -412,7 +400,7 @@ footer {
   }
 
   .banner-circulares {
-    margin-top: -30px;
+    margin-top: -40px;
   }
 
   .grid-2 {
