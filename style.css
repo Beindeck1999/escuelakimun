@@ -236,9 +236,9 @@ header {
 .circulo-text {
   font-size: 16px;
   font-weight: 900;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  fill: ##4b4b4b;
+  fill: #444;
 }
 
 /* ==========================
