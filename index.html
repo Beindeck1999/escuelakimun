@@ -67,25 +67,20 @@
       <div class="circulo-item circulo-left">
         <svg viewBox="0 0 220 220" class="circulo-svg">
           <defs>
-            <!-- círculo para recortar imagen -->
             <clipPath id="clipImg1">
               <circle cx="110" cy="105" r="85" />
             </clipPath>
-            <!-- arco de texto solo abajo -->
             <path id="txtPath1"
                   d="M40,160 a70,70 0 0,0 140,0" />
           </defs>
 
-          <!-- borde del círculo -->
           <circle cx="110" cy="110" r="95" class="circulo-base" />
 
-          <!-- imagen recortada redonda -->
           <image href="img/salas.png"
                  x="25" y="20" width="170" height="170"
                  clip-path="url(#clipImg1)"
                  preserveAspectRatio="xMidYMid slice" />
 
-          <!-- texto curvo abajo -->
           <text class="circulo-text">
             <textPath href="#txtPath1"
                       startOffset="50%"
@@ -259,5 +254,4 @@
 
 </body>
 </html>
-
 
