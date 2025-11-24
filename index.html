@@ -63,32 +63,33 @@
     <!-- CÍRCULOS ABAJO, CENTRADOS -->
     <div class="banner-circulares">
 
-     <!-- CÍRCULO 1 -->
+    <!-- CÍRCULO 1 -->
 <div class="circulo-item circulo-left">
-  <svg viewBox="0 0 220 220" class="circulo-svg">
+  <svg viewBox="0 0 220 240" class="circulo-svg">
 
     <defs>
-      <!-- recorte exacto -->
+      <!-- recorte de la imagen -->
       <clipPath id="clipImg1">
         <circle cx="110" cy="110" r="95" />
       </clipPath>
 
-      <!-- curva para el texto (abajo, por fuera del círculo) -->
+      <!-- CURVA DEL TEXTO (más abajo, arco perfecto) -->
       <path id="txtPath1"
-            d="M10,185 a100,100 0 0,0 200,0" />
+            d="M20,210 
+               A100,100 0 0,0 200,210" />
     </defs>
 
     <!-- borde del círculo -->
     <circle cx="110" cy="110" r="95" class="circulo-base" />
 
-    <!-- IMAGEN (tu configuración que quedó bien) -->
+    <!-- imagen llena -->
     <image href="img/salas.png"
            x="0" y="0" width="220" height="220"
            clip-path="url(#clipImg1)"
            preserveAspectRatio="xMidYMid slice" />
 
-    <!-- texto curvo estilo Canva -->
-    <text class="circulo-text">
+    <!-- texto curvo arreglado -->
+    <text class="circulo-text" dy="6">
       <textPath href="#txtPath1"
                 startOffset="50%"
                 text-anchor="middle">
