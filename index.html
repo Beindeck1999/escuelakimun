@@ -63,7 +63,7 @@
     <!-- CÍRCULOS ABAJO, CENTRADOS -->
     <div class="banner-circulares">
 
-    <!-- CÍRCULO 1 -->
+ <!-- CÍRCULO 1 -->
 <div class="circulo-item circulo-left">
   <svg viewBox="0 0 220 240" class="circulo-svg">
 
@@ -73,10 +73,10 @@
         <circle cx="110" cy="110" r="95" />
       </clipPath>
 
-      <!-- CURVA DEL TEXTO (más abajo, arco perfecto) -->
+      <!-- CURVA DEL TEXTO (un poco más arriba) -->
       <path id="txtPath1"
-            d="M20,210 
-               A100,100 0 0,0 200,210" />
+            d="M20,205
+               A100,100 0 0,0 200,205" />
     </defs>
 
     <!-- borde del círculo -->
@@ -88,8 +88,8 @@
            clip-path="url(#clipImg1)"
            preserveAspectRatio="xMidYMid slice" />
 
-    <!-- texto curvo arreglado -->
-    <text class="circulo-text" dy="6">
+    <!-- texto curvo -->
+    <text class="circulo-text">
       <textPath href="#txtPath1"
                 startOffset="50%"
                 text-anchor="middle">
@@ -98,6 +98,7 @@
     </text>
   </svg>
 </div>
+
 
       <!-- CÍRCULO 2 (CENTRAL, DESTACA) -->
       <div class="circulo-item circulo-center">
