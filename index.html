@@ -63,33 +63,41 @@
     <!-- CÍRCULOS ABAJO, CENTRADOS -->
     <div class="banner-circulares">
 
-      <!-- CÍRCULO 1 -->
-      <div class="circulo-item circulo-left">
-        <svg viewBox="0 0 220 220" class="circulo-svg">
-          <defs>
-            <clipPath id="clipImg1">
-              <circle cx="110" cy="110" r="95" />
-            </clipPath>
-            <path id="txtPath1"
-                  d="M 30 150 A 80 80 0 0 0 190 150" />
-          </defs>
+     <!-- CÍRCULO 1 -->
+<div class="circulo-item circulo-left">
+  <svg viewBox="0 0 220 220" class="circulo-svg">
 
-          <circle cx="110" cy="110" r="95" class="circulo-base" />
+    <defs>
+      <!-- recorte exacto -->
+      <clipPath id="clipImg1">
+        <circle cx="110" cy="110" r="95" />
+      </clipPath>
 
-          <image href="img/salas.png"
-                 x="0" y="0" width="220" height="220"
-                 clip-path="url(#clipImg1)"
-                 preserveAspectRatio="xMidYMid slice" />
+      <!-- curva para el texto (abajo, por fuera del círculo) -->
+      <path id="txtPath1"
+            d="M 30 150 A 80 80 0 0 0 190 150" />
+    </defs>
 
-          <text class="circulo-text">
-            <textPath href="#txtPath1"
-                      startOffset="50%"
-                      text-anchor="middle">
-              Salas de clases
-            </textPath>
-          </text>
-        </svg>
-      </div>
+    <!-- borde del círculo -->
+    <circle cx="110" cy="110" r="95" class="circulo-base" />
+
+    <!-- IMAGEN (tu configuración que quedó bien) -->
+    <image href="img/salas.png"
+           x="0" y="0" width="220" height="220"
+           clip-path="url(#clipImg1)"
+           preserveAspectRatio="xMidYMid slice" />
+
+    <!-- texto curvo estilo Canva -->
+    <text class="circulo-text">
+      <textPath href="#txtPath1"
+                startOffset="50%"
+                text-anchor="middle">
+        SALAS DE CLASES
+      </textPath>
+    </text>
+
+  </svg>
+</div>
 
       <!-- CÍRCULO 2 (CENTRAL, DESTACA) -->
       <div class="circulo-item circulo-center">
