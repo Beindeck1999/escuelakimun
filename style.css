@@ -192,13 +192,13 @@ header {
    ========================== */
 
 .banner-circulares {
-  margin-top: -60px;
+  margin-top: -140px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .circulo-item {
