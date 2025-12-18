@@ -389,6 +389,28 @@ footer {
 @media (max-width: 768px) {
   .nav-inner {
     flex-wrap: wrap;
+       .nav-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .main-nav a,
+  .btn-agenda {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
   }
 
   .banner-frontis {
