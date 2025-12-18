@@ -4,7 +4,8 @@ const mainNav = document.querySelector('.main-nav');
 
 if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('nav-open');
+    const isOpen = mainNav.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', isOpen);
   });
 }
 
